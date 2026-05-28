@@ -8,34 +8,33 @@ use App\Models\employee;
 
 class employeecontroller extends Controller
 {
-    public function index()
-    // {   $employees = employee::all();
-    //     return view('employee.index', compact('employees'));    
-        
+    public function index(){
+        $employee = employee::all();
+        return view('employee.index', compact('employee'));
     }
 
 
     public function create()
-    // {
-    //     return view('employee.create');
-    // }
+     {
+         return view('employee.create');
+     }
 
 
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'fname' => 'required',
-    //         'mname' => 'required',
-    //         'lname' => 'required',
-    //         'address' => 'required',
-    //         'date_of_birth' => 'required|date',
-    //         'contact_number' => 'required|string|max:20',
-    //     ]);
+     public function store(Request $request)
+     {
+        $request->validate([
+            'fname' => 'required',
+            'mname' => 'required',
+             'lname' => 'required',
+             'address' => 'required',
+           'date_of_birth' => 'required|date',
+           'contact_number' => 'required|string|max:20',
+       ]);
 
-    //     employee::create($request->all());
+        employee::create($request->all());
 
-    //     return redirect()->route('employee.index')->with('status', 'Employee created successfully!');
-    // }
+         return redirect()->route('employee.index')->with('status', 'Employee created successfully!');
+    }
 
     public function edit( int $id)
     {
