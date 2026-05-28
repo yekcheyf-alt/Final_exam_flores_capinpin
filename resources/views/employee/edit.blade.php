@@ -53,6 +53,7 @@
                   <label for="exampleInputPassword1">Age</label>
                   <input type="number" class="form-control" id="age" name="age" placeholder="" value="{{ $employees->age}}">
                 </div>
+                
                 <div class="form-group col-6">
                   <button type="submit" class="btn btn-success col-12">Update Student Record</button>
                 </div>

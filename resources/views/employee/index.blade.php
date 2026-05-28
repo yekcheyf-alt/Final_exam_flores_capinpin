@@ -31,6 +31,7 @@
                                             <th>Address</th>
                                             <th>Date of Birth</th>
                                             <th>Action</th>
+                                            <th>Contact Number</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -42,6 +43,8 @@
                                             <td>{{ $employee->mname }}</td>
                                             <td>{{ $employee->address }}</td>
                                             <td>{{ $employee->date_of_birth }}</td>
+                                            <td>{{ $employee->contact_number }}</td>
+                                            
                                             <td> 
                                                 <a href="{{ route('employee.edit', $employee->id) }}" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
                                                 <a href="{{ route('employee.destroy', $employee->id) }}" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a>
