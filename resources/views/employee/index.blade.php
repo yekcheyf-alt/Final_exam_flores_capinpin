@@ -15,6 +15,9 @@
 
     <!-- Main content -->
     <div class="content">
+        <form action="{{ route('employee.index') }}" method="GET">
+            
+       
         <div class="container-fluid">
             <a href="{{ route('employee.create') }}" class="btn btn-info">Add New Employee</a> <br> <br>
                 <div class="row">
@@ -22,6 +25,7 @@
                         <div class="card">
                             <div class="card-body p-0">
                                 <table class="table">
+
                                     <thead>
                                         <tr>
                                             <th>ID</th>
@@ -44,11 +48,11 @@
                                             <td>{{ $employees->address }}</td>
                                             <td>{{ $employees->date_of_birth }}</td>
                                             <td>{{ $employees->contact_number }}</td>
-                                            
                                             <td> 
                                                 <a href="{{ route('employee.edit', $employees->id) }}" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
                                                 <a href="{{ route('employee.destroy', $employees->id) }}" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a>
                                             </td>
+                                            <td>{{ $employees->contact_number }}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -59,6 +63,7 @@
                 </div>
             </div>
         </div><!-- /.container-fluid -->
+        </form>
     </div>
     <!-- /.content -->
 @endsection

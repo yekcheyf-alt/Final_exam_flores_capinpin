@@ -34,10 +34,10 @@
                         </div>
                         <div class="form-group col-6">
                           <label for="exampleInputPassword1">Middlename</label>
-                          <input type="text" class="form-control g-2" id="midname" name="mname" placeholder="Enter your Middlename" require>
+                          <input type="text" class="form-control g-2" id="mname" name="mname" placeholder="Enter your Middlename" require>
                         </div>
                         @error('lname') <span class="text-danger">{{$message}}</span>@enderror
-                        @error('midname') <span class="text-danger">{{$message}}</span> @enderror  
+                        @error('mname') <span class="text-danger">{{$message}}</span> @enderror  
                         <div class="form-group col-12">
                           <label for="exampleInputPassword1">FirstName</label>
                           <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your First Name">
@@ -50,9 +50,14 @@
                           @error('address') <div class="text-danger">{{ $message }}</div> @enderror
                         <div class="form-group col-6">
                           <label for="exampleInputPassword1">Date of Birth</label>
-                          <input type="date" class="form-control" id="dob" name="dob" placeholder="YYYY-MM-DD"> <br>
-                          @error('dob') <div class="text-danger">{{ $message }}</div> @enderror
+                          <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" placeholder="YYYY-MM-DD"> <br>
+                          @error('date_of_birth') <div class="text-danger">{{ $message }}</div> @enderror
                         </div>
+                        <div class="form-group col-6">
+                          <label for="exampleInputPassword1">Contact Number</label>
+                          <input type="number" class="form-control" id="contact_number" name="contact_number" placeholder="Enter your Contact Number">
+                        </div>
+                          @error('contact_number') <div class="text-danger">{{ $message }}</div> @enderror
                         <div class="form-group col-6">
                         </div>
                         <button type="submit" class="btn btn-success col-6 m-auto">Submit Student Record</button>
