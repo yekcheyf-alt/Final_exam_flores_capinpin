@@ -35,21 +35,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($employees as $employee)
+                                        @foreach($employee as $employees)
                                         <tr>
-                                            <td>{{ $employee->id }}</td>
-                                            <td>{{ $employee->fname }}</td>
-                                            <td>{{ $employee->lname }}</td>
-                                            <td>{{ $employee->mname }}</td>
-                                            <td>{{ $employee->address }}</td>
-                                            <td>{{ $employee->date_of_birth }}</td>
-                                            <td>{{ $employee->contact_number }}</td>
+                                            <td>{{ $employees->id }}</td>
+                                            <td>{{ $employees->fname }}</td>
+                                            <td>{{ $employees->lname }}</td>
+                                            <td>{{ $employees->mname }}</td>
+                                            <td>{{ $employees->address }}</td>
+                                            <td>{{ $employees->date_of_birth }}</td>
+                                            <td>{{ $employees->contact_number }}</td>
                                             
                                             <td> 
-                                                <a href="{{ route('employee.edit', $employee->id) }}" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
-                                                <a href="{{ route('employee.destroy', $employee->id) }}" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a>
+                                                <a href="{{ route('employee.edit', $employees->id) }}" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Edit</a>
+                                                <a href="{{ route('employee.destroy', $employees->id) }}" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Delete</a>
                                             </td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
